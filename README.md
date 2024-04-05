@@ -7,6 +7,7 @@ git clone https://github.com/larsewi/chiacheng.git
 
 ## Create/start VM's and setup CFEngine (1 hub, 1 client)
 ```
+cd chiacheng/
 ./bootstrap.sh
 ```
 
