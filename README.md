@@ -11,7 +11,7 @@ vagrant up hub
 ```
 
 ## Login to Mission Portal
-https://192.168.56.21/
+https://192.168.56.20/
 
 ## Stop VM
 ```
