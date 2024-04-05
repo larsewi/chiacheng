@@ -5,6 +5,14 @@ Vagrant.configure(2) do |config|
     v.gui = false
   end
 
+  config.vm.provision "shell" do |s|
+      ssh_pub_key = File.readlines("#{Dir.home}/.ssh/id_rsa.pub").first.strip
+      s.inline = <<-SHELL
+        echo #{ssh_pub_key} >> /home/vagrant/.ssh/authorized_keys
+        echo #{ssh_pub_key} >> /root/.ssh/authorized_keys
+      SHELL
+    end
+
   config.vm.define "hub" do |hub|
     hub.vm.box = 'ubuntu/jammy64'
     hub.vm.hostname = "hub"

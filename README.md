@@ -1,20 +1,24 @@
 # chiacheng
 
-## Clone repository
+## Create/start VM
 ```
-git clone https://github.com/larsewi/chiacheng.git
+vagrant up hub
 ```
 
-## Create/start VM's and setup CFEngine (1 hub, 1 client)
+## Install CFEngine
 ```
-cd chiacheng/
 ./bootstrap.sh
 ```
 
 ## Login to Mission Portal
 https://192.168.56.21/
 
-## Delete CFEngine and stop VM's
+## Stop VM
 ```
-./erase.sh
+vagrant halt hub
+```
+
+## Destroy VM
+```
+vagrant destroy hub
 ```
